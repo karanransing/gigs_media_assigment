@@ -1,0 +1,591 @@
+{
+	"info": {
+		"_postman_id": "c060a943-e96c-4266-8ff5-5d407508772a",
+		"name": "gigs_media_assigmnent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MjY5Njc0MiwiZXhwIjoxNjQyNzAwMzQyLCJuYmYiOjE2NDI2OTY3NDIsImp0aSI6IkdwT0E3UUV2WlcySGxBN2YiLCJzdWIiOm51bGwsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.y3L8yOLbAPTemy1F4y7ORMK36-RXu38cVyGDATkCado",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "karan",
+							"type": "default"
+						},
+						{
+							"key": "lastname",
+							"value": "ransing",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "karanransing111@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "mobile",
+							"value": "9028213464",
+							"type": "default"
+						},
+						{
+							"key": "age",
+							"value": "33",
+							"type": "default"
+						},
+						{
+							"key": "gender",
+							"value": "m",
+							"type": "default"
+						},
+						{
+							"key": "city",
+							"value": "pune",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "karan1111",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "API for adding new user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/login",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "karanransing1111@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "karan1111",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Register first and use the email and password in this api to obtain token"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/view_profile/3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg3MDg3NywiZXhwIjoxNjQyODc0NDc3LCJuYmYiOjE2NDI4NzA4NzcsImp0aSI6ImRNdmJEVDk1Tml5R1ZVMHIiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rTpJ3d1Ly4kLEPqNZ_-V9bld1h4Zio3LdNnZPioLC18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/view_profile/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"view_profile",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8000/api/book_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg0NTUxOSwiZXhwIjoxNjQyODQ5MTE5LCJuYmYiOjE2NDI4NDU1MTksImp0aSI6Ik9tT1kyS244czcyQ2FvUFciLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7sx3v6S6a5IrhhZ50VXhQeh_OHsRYU1ybDsx78iVGPw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/book_list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"book_list"
+					]
+				},
+				"description": "Book API for listing 10 books"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8000/api/add_book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book_name\":\"Mutrunjay\",\r\n    \"author\":\"Shivaji Patil\",\r\n    \"cover_image\":\"Red Cover\",\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg3MDg3NywiZXhwIjoxNjQyODc0NDc3LCJuYmYiOjE2NDI4NzA4NzcsImp0aSI6ImRNdmJEVDk1Tml5R1ZVMHIiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rTpJ3d1Ly4kLEPqNZ_-V9bld1h4Zio3LdNnZPioLC18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/add_book",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add_book"
+					]
+				},
+				"description": "API for adding new book"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8000/api/update_book/1",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book_name\":\"two state\",\r\n    \"author\":\"chetan bhagat\",\r\n    \"cover_image\":\"beutiful cover\",\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg0NTUxOSwiZXhwIjoxNjQyODQ5MTE5LCJuYmYiOjE2NDI4NDU1MTksImp0aSI6Ik9tT1kyS244czcyQ2FvUFciLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7sx3v6S6a5IrhhZ50VXhQeh_OHsRYU1ybDsx78iVGPw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update_book/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_book",
+						"1"
+					]
+				},
+				"description": "API for updating book details"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8000/api/delete_book/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg0NTUxOSwiZXhwIjoxNjQyODQ5MTE5LCJuYmYiOjE2NDI4NDU1MTksImp0aSI6Ik9tT1kyS244czcyQ2FvUFciLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7sx3v6S6a5IrhhZ50VXhQeh_OHsRYU1ybDsx78iVGPw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete_book/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete_book",
+						"2"
+					]
+				},
+				"description": "API for deleting book from database table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/view_book/3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg0NTUxOSwiZXhwIjoxNjQyODQ5MTE5LCJuYmYiOjE2NDI4NDU1MTksImp0aSI6Ik9tT1kyS244czcyQ2FvUFciLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7sx3v6S6a5IrhhZ50VXhQeh_OHsRYU1ybDsx78iVGPw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/view_book/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"view_book",
+						"3"
+					]
+				},
+				"description": "API for view Book Details by book id"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8000/api/logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg0NTUxOSwiZXhwIjoxNjQyODQ5MTE5LCJuYmYiOjE2NDI4NDU1MTksImp0aSI6Ik9tT1kyS244czcyQ2FvUFciLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7sx3v6S6a5IrhhZ50VXhQeh_OHsRYU1ybDsx78iVGPw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": "API for User to logout"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8000/api/get_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg0NTUxOSwiZXhwIjoxNjQyODQ5MTE5LCJuYmYiOjE2NDI4NDU1MTksImp0aSI6Ik9tT1kyS244czcyQ2FvUFciLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7sx3v6S6a5IrhhZ50VXhQeh_OHsRYU1ybDsx78iVGPw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_user"
+					]
+				},
+				"description": "API for get the logged in user detail"
+			},
+			"response": []
+		},
+		{
+			"name": " http://127.0.0.1:8000/api/rent_book/4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg3MDg3NywiZXhwIjoxNjQyODc0NDc3LCJuYmYiOjE2NDI4NzA4NzcsImp0aSI6ImRNdmJEVDk1Tml5R1ZVMHIiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rTpJ3d1Ly4kLEPqNZ_-V9bld1h4Zio3LdNnZPioLC18\",\r\n    \"remark\":\"sometihng for testing\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/rent_book/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"rent_book",
+						"4"
+					]
+				},
+				"description": "API for renting book"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/return_book/1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg2NTkwOSwiZXhwIjoxNjQyODY5NTA5LCJuYmYiOjE2NDI4NjU5MDksImp0aSI6IkdTVjIzSHo0NHNQWVRkQm8iLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AEqessXY6pcU455ULLJyjCZP2a3dOI6MBhW1zeimAiI\",\r\n    \"remark\":\"sometihng for testing return\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/return_book/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"return_book",
+						"1"
+					]
+				},
+				"description": "API for returning book"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/getuserbooks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg3MDg3NywiZXhwIjoxNjQyODc0NDc3LCJuYmYiOjE2NDI4NzA4NzcsImp0aSI6ImRNdmJEVDk1Tml5R1ZVMHIiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rTpJ3d1Ly4kLEPqNZ_-V9bld1h4Zio3LdNnZPioLC18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getuserbooks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getuserbooks"
+					]
+				},
+				"description": "API for getting details of rented books by particular user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/delete_user/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg3MDg3NywiZXhwIjoxNjQyODc0NDc3LCJuYmYiOjE2NDI4NzA4NzcsImp0aSI6ImRNdmJEVDk1Tml5R1ZVMHIiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rTpJ3d1Ly4kLEPqNZ_-V9bld1h4Zio3LdNnZPioLC18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete_user/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete_user",
+						"2"
+					]
+				},
+				"description": "API for deleting particular user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/update_user/3",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"karanR\",\r\n    \"lastname\":\"Ransing\",\r\n    \"mobile\":\"9028213466\",\r\n    \"age\":\"32\",\r\n    \"gender\":\"m\",\r\n    \"city\":\"Wagholi Pune\",\r\n   \"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0Mjg3MDg3NywiZXhwIjoxNjQyODc0NDc3LCJuYmYiOjE2NDI4NzA4NzcsImp0aSI6ImRNdmJEVDk1Tml5R1ZVMHIiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rTpJ3d1Ly4kLEPqNZ_-V9bld1h4Zio3LdNnZPioLC18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update_user/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_user",
+						"3"
+					]
+				},
+				"description": "API for updating user profile"
+			},
+			"response": []
+		}
+	]
+}
